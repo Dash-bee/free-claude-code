@@ -49,6 +49,7 @@ $metadata | ConvertTo-Json -Depth 4 |
 $tests = @(
     "pilot/test_fault_matrix.py",
     "pilot/test_cost_guard.py",
+    "pilot/test_vertex_policy_check.py",
     "tests/api/test_model_fallback.py",
     "tests/application/test_routing.py",
     "tests/providers/test_provider_admission.py",

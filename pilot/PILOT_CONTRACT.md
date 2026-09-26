@@ -113,3 +113,13 @@ Each run writes a timestamped result directory containing:
 
 A PASS is evidence for the pinned commit only. Updating FCC invalidates the qualification until the
 fault suite and abbreviated live canary are rerun.
+
+### Vertex-specific preflight
+Before any Vertex/Gemini generation request, the live launcher MUST obtain a fresh PASS
+from `vertex_preflight.ps1`. A failure is a hard stop, not a warning.
+
+The PASS binds the run to one exact project, one exact open billing account, one exact
+Vertex API service, the tracked model/location allowlists, the isolated ADC path, a
+machine-verified project/service budget, a fresh Spend Cap console attestation, and the
+tracked local dollar envelope. The run reservation is written before inference starts.
+Direct Vertex/Gemini invocation that bypasses this launcher is outside the authorized pilot.

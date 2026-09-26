@@ -19,3 +19,5 @@ llama_cache
 .pilot-venv/
 pilot/results/
 pilot/.secrets*
+.auth/
+pilot/.vertex-spend-cap-attestation.json
