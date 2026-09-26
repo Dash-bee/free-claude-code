@@ -50,10 +50,12 @@ $tests = @(
     "pilot/test_fault_matrix.py",
     "pilot/test_cost_guard.py",
     "tests/api/test_model_fallback.py",
-    "tests/application/test_routing.py"
+    "tests/application/test_routing.py",
+    "tests/providers/test_provider_admission.py",
+    "tests/providers/test_streaming_errors.py"
 )
 $log = Join-Path $resultDir "pytest.txt"
-& $Python -m pytest -n 0 --tb=short @tests *> $log
+& $Python -m pytest -n 0 -p pilot.network_guard --tb=short @tests *> $log
 $exitCode = $LASTEXITCODE
 Get-Content $log
 

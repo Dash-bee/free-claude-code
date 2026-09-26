@@ -1,4 +1,4 @@
-"""Pilot-only guardrails."""
+"""Global no-egress pytest plugin for the deterministic FCC pilot."""
 
 import ipaddress
 import socket
@@ -19,7 +19,7 @@ def _loopback(host: str) -> bool:
 def block_external_network(monkeypatch: pytest.MonkeyPatch) -> None:
     original = socket.socket.connect
 
-    def guarded_connect(sock: socket.socket, address) -> object:
+    def guarded_connect(sock: socket.socket, address):
         if isinstance(address, tuple) and address:
             host = str(address[0])
             if not _loopback(host):

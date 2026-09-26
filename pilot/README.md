@@ -8,7 +8,7 @@ Branch: `karp/fcc-pilot-v1`
 
 ## Current status
 - Gate 0 supply-chain pin: PASS
-- Gate 1 deterministic routing/fault contracts: PASS (57 tests)
+- Gate 1 deterministic routing/fault contracts: PASS (189 tests, global no-egress guard)
 - Gate 2 live provider canary: NOT RUN
 - Gate 3 live cost/quota accounting: NOT RUN
 - Gate 4 unattended coding-worker soak: NOT RUN
