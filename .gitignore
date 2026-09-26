@@ -16,3 +16,6 @@ llama_cache
 .smoke-results
 /test-results/
 .vscode
+.pilot-venv/
+pilot/results/
+pilot/.secrets*

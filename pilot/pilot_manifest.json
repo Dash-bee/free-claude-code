@@ -1,0 +1,17 @@
+{
+  "pilot": "karp-fcc-pilot-v1",
+  "upstream": "Alishahryar1/free-claude-code",
+  "fork": "Dash-bee/free-claude-code",
+  "branch": "karp/fcc-pilot-v1",
+  "pinned_sha": "ba4b934147855025df30bbca3ad6d436158fe671",
+  "python": "3.14.7",
+  "production_access": false,
+  "live_spend_cap_usd": 5.0,
+  "per_task_spend_cap_usd": 0.25,
+  "unattended_min_tasks": 100,
+  "unattended_min_completion_rate": 0.98,
+  "rolling_failure_window": 20,
+  "rolling_failure_stop_rate": 0.05,
+  "consecutive_failure_stop": 3,
+  "qualification_scope": "pinned commit + provider route + worker class"
+}
